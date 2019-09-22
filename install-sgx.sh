@@ -44,4 +44,5 @@
 
     echo "===> Installed SGX on Linux. Chose to install SGX in current directory, respond with 'yes'."
     echo "Setting LD LIBRARY PATH"
+    echo "<3 from https://secretnodes.org"
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
