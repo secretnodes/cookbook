@@ -1,6 +1,6 @@
 #!/bin/bash
 #Tested on ubuntu server 18.04
-#Verson 0.1
+#Version 0.1
 
 echo "To install the Intel® SGX PSW, first install the following tools: On Ubuntu* 18.04:"
 sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev
@@ -17,17 +17,18 @@ wget "https://download.01.org/intel-sgx/linux-2.6/ubuntu18.04-server/sgx_linux_x
 
 echo "===> Change permissions for sgx driver bin."
 chmod +x ./sgx_linux_x64_driver_2.5.0_2605efa.bin
-chmod +x ./sgx_linux_x64_sdk_2.6.100.51363.bin
+chmod +x sgx_linux_x64_sdk_2.6.100.51363.bin
 
 echo "Install the Intel® SGX driver package"
 sudo ./sgx_linux_x64_driver_2.5.0_2605efa.bin
 
 echo "Install the Intel® SGX PSW package using the following command: on Ubuntu* 18.04:"
 sudo dpkg -i ./libsgx-enclave-common_2.6.100.51363-bionic1_amd64.deb
+sudo dpkg -i libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb
 
-echo "===> Running step 7 - installing sdk"
-sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
+echo "Installing sgx sdk."
+sudo ./sgx_linux_x64_driver_2.5.0_2605efa.bin
 
-echo "===> Installed SGX on Linux. Chose to install SGX in the 'isgx' directory. So answer 'no' then type 'isgx' without quotes."
+echo "===> Installed SGX on Linux."
 echo "Setting LD LIBRARY PATH"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
