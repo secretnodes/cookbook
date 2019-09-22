@@ -42,6 +42,6 @@
     sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
     sleep 2
 
-    echo "===> Installed SGX on Linux. Chose to install SGX in the 'isgx' directory. So answer 'no' then type 'isgx' without quotes."
+    echo "===> Installed SGX on Linux. Chose to install SGX in current directory, respond with 'yes'."
     echo "Setting LD LIBRARY PATH"
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
