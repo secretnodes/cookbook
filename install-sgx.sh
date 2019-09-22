@@ -1,6 +1,6 @@
 #!/bin/bash
 #Tested on ubuntu server 18.04
-#Version 0.1
+#Verson 0.1
 
 echo "To install the Intel® SGX PSW, first install the following tools: On Ubuntu* 18.04:"
 sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev
@@ -24,9 +24,6 @@ sudo ./sgx_linux_x64_driver_2.5.0_2605efa.bin
 
 echo "Install the Intel® SGX PSW package using the following command: on Ubuntu* 18.04:"
 sudo dpkg -i ./libsgx-enclave-common_2.6.100.51363-bionic1_amd64.deb
-
-echo "Ubuntu* 18.04 requires installing this debug symbol package."
-sudo dpkg -i ./libsgx-enclave-common-dbgsym_2.6.100.51363-bionic1_amd64.ddeb
 
 echo "===> Running step 7 - installing sdk"
 sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
