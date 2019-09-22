@@ -9,7 +9,7 @@ wget -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/st
 wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
 
 echo "Downloading Discovery-Docker-Network."
-git pull https://github.com/enigmampc/discovery-docker-network.git
+git clone https://github.com/enigmampc/discovery-docker-network.git
 sleep 2
 
 echo "Change permissions for install sgx, install docker, start, & upgrade scripts."
