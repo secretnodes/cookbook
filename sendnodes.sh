@@ -3,10 +3,10 @@
 #Version 0.15 | Sep 22, 2019
 
 echo "Downloading scripts to configure your Secret Node."
-wget "https://raw.githubusercontent.com/secretnodes/scripts/master/install-docker.sh"
-wget "https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh"
-wget "https://raw.githubusercontent.com/secretnodes/scripts/master/start.sh"
-wget "https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh"
+wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-docker.sh
+wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh
+wget -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/start.sh
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
 
 echo "Downloading Discovery-Docker-Network."
 git pull https://github.com/enigmampc/discovery-docker-network.git
