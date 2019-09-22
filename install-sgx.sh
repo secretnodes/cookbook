@@ -35,10 +35,10 @@
     echo "Installing psw"
     sudo dpkg -i ./libsgx-enclave-common_2.6.100.51363-bionic1_amd64.deb
     sleep 2
-    sudo d2kg -i libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb
+    sudo dpkg -i ./libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb
     sleep 1
 
-    echo "Installing Intel sdk."
+    echo "===> Running step 7 - installing sdk"
     sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
     sleep 2
 
