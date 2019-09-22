@@ -38,7 +38,7 @@
     sudo d2kg -i libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb
     sleep 1
 
-    echo "===> Running step 7 - installing sdk"
+    echo "Installing Intel sdk."
     sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
     sleep 2
 
