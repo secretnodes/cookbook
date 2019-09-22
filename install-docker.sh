@@ -1,6 +1,5 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.1
 
 echo "===> Running step 1"
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
@@ -34,3 +33,4 @@ echo "===> Verify Docker Compose installation was successful."
 echo "===> type : docker-compose --version"
 echo "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running"
 echo "===> type : sudo systemctl status docker"
+echo "<3 from https://secretnodes.org"
