@@ -5,7 +5,7 @@
     echo "apt-get dpkg & update"
     sudo apt-get update
     sleep 5
-    apt install dpkg
+    sudo apt install dpkg
 
     echo "To install the Intel® SGX PSW, first install the following tools"
     sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev
