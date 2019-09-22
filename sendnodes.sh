@@ -1,6 +1,6 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.15 | Sep 22, 2019
+#Version 0.16 | Sep 22, 2019
 
 echo "Downloading scripts to configure your Secret Node."
 wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-docker.sh
