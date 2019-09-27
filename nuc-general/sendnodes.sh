@@ -1,10 +1,7 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.2 ALTMETHOD | Sep 22, 2019
-
-echo "Downloading Discovery-Docker-Network."
-git clone https://github.com/enigmampc/discovery-docker-network.git
-sleep 2
+#Version 0.2 NUC General | Sep 26, 2019
+#Tested on : 8i7BEK, ...
 
 echo "Downloading scripts to configure your Secret Node."
 wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/altmethod/install-docker.sh
@@ -12,6 +9,8 @@ sleep 1
 wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/altmethod/install-sgx.sh
 sleep 1
 wget -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/altmethod/start.sh
+sleep 1
+wget -O install-enigma-node.sh https://github.com/secretnodes/scripts/blob/master/nuc-general/install-enigma-node.sh
 sleep 1
 wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/altmethod/upgrade.sh
 sleep 1
