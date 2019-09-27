@@ -13,7 +13,7 @@ nameserver 8.8.8.8
 nameserver 127.0.0.53
 options edns0t" | tee nuc-1.fix
 
-echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"
+echo "Creating symlink via: ln -s /etc/resolv.conf nuc-1.fix"
 ln -s /etc/resolv.conf nuc-1.fix
 
 echo "Note: To upgrade all scripts, you must merely run sendnodes.sh again."
