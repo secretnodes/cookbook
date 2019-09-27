@@ -16,6 +16,8 @@ wget -O upgrade.sh https://github.com/secretnodes/scripts/blob/master/nuc-genera
 sleep 1
 wget -O upgrade.sh https://github.com/secretnodes/scripts/blob/master/nuc-general/install-fixes.sh
 sleeep 1
+wget -O upgrade.sh https://github.com/secretnodes/scripts/blob/master/nuc-general/uninstall.sh
+sleeep 1
 
 echo "Change permissions for install sgx, install docker, start, & upgrade scripts."
 sudo chmod u+x ~/install-sgx.sh
@@ -29,6 +31,8 @@ sleep 1
 sudo chmod u+x ~/install-enigma-node.sh
 sleep 1
 sudo chmod u+x ~/install-fixes.sh
+sleep 1
+sudo chmod u+x ~/uninstall.sh
 sleep 1
 
 echo "Running upgrade.sh script."
