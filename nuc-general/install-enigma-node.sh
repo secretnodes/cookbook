@@ -4,4 +4,6 @@
 #Tested on : 8i7BEK, ...
 
 echo "Downloading and installing enigma node software."
-sudo bash install-enigma-node.sh
+echo "Pre Genesis Games | DevNet | Discovery-Docker-Network."
+git clone https://github.com/enigmampc/discovery-docker-network.git
+sleep 2
