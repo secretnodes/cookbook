@@ -49,7 +49,7 @@ echo "Running install-sgx.sh script."
 sudo bash install-sgx.sh
 sleep 5
 
-echo "Running install-enigma-node.sh
+echo "Running install-enigma-node.sh"
 sudo bash install-enigma-node.sh
 sleep 5
 
