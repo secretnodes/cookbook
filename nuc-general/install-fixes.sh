@@ -19,7 +19,7 @@ echo "name server 1.1.1.1" >> nuc-1.fix
 #cp /etc/resolv.conf resolf-backup.conf
 #sudo mv -f nuc-1.fix /etc/resolv.conf
 
-echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"	echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"
-sudo ln -s /etc/resolv.conf nuc-1.fix	ln -s /etc/resolv.conf nuc-1.fix
+echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"
+sudo ln -s /etc/resolv.conf nuc-1.fix
 
 echo "Note: To upgrade all scripts, you must merely run sendnodes.sh again."
