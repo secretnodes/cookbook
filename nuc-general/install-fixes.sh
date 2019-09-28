@@ -16,10 +16,12 @@ echo "Please report any issues you face at https://t.me/secretnodes"
 
 #echo "Adding Cloudflare nameserver 1.1.1.1"
 #echo "name server 1.1.1.1" >> nuc-1.fix
-cp /etc/resolv.conf resolv-backup.conf
+#cp /etc/resolv.conf resolv-backup.conf
 #sudo mv -f nuc-1.fix /etc/resolv.conf
 
-echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"
-sudo ln -s /etc/resolv.conf nuc-1.fix
+#echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"
+#sudo ln -s /etc/resolv.conf nuc-1.fix
 
+echo "Implimenting fix for docker caused networking issue https://github.com/docker/libnetwork/issues/2187"
+ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 echo "Note: To upgrade all scripts, you must merely run sendnodes.sh again."
