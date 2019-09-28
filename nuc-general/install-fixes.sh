@@ -14,7 +14,4 @@ echo "server=1.1.1.1" >> nuc-1.fix
 sudo cp /etc/dnsmasq.conf dnsmasq-default.conf
 sudo mv -f nuc-1.fix /etc/dnsmasq.conf
 
-echo "Creating symlink via: ln -s /etc/resolv.conf nuc-1.fix"
-ln -s /etc/resolv.conf nuc-1.fix
-
 echo "Note: To upgrade all scripts, you must merely run sendnodes.sh again."
