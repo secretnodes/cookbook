@@ -57,4 +57,8 @@ echo "Running install-fixes.sh"
 sudo bash install-fixes.sh
 sleep 2
 
+echo "Applying fixes."
+sudo bash install-fixes.sh
+sleep 2
+
 echo "<3 from https://secretnodes.org"
