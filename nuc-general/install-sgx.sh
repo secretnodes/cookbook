@@ -38,11 +38,10 @@ sleep 2
 sudo dpkg -i ./libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb
 sleep 1
 
-echo "===> Running step 7 - installing sdk"
+echo "Installing SGX on Linux. Chose to install SGX in current directory, respond with 'no'."
 sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
 sleep 2
 
-echo "===> Installed SGX on Linux. Chose to install SGX in current directory, respond with 'yes'."
 echo "Setting LD LIBRARY PATH"
 echo "<3 from https://secretnodes.org"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
