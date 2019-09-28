@@ -14,9 +14,9 @@ echo "Please report any issues you face at https://t.me/secretnodes"
 #sudo cp /etc/dnsmasq.conf dnsmasq-default.conf
 #sudo mv -f nuc-1.fix /etc/dnsmasq.conf
 
-echo "Adding Cloudflare nameserver 1.1.1.1"
-echo "name server 1.1.1.1" >> nuc-1.fix
-#cp /etc/resolv.conf resolf-backup.conf
+#echo "Adding Cloudflare nameserver 1.1.1.1"
+#echo "name server 1.1.1.1" >> nuc-1.fix
+cp /etc/resolv.conf resolv-backup.conf
 #sudo mv -f nuc-1.fix /etc/resolv.conf
 
 echo "Creating symlink via: Ls -s /etc/resolv.conf nuc-1.fix"
