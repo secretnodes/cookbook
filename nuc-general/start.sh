@@ -2,6 +2,9 @@
 #Configured for ubuntu server 18.04
 #Version 0.1 | Sep 22, 2019
 
+echo "Applying fixes."
+sudo bash install-fixes.sh
+
 echo "CD into Discovery-Docker-Network"
 cd discovery-docker-network
 
