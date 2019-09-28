@@ -4,19 +4,19 @@
 #Tested on : 8i7BEK, ...
 
 echo "Downloading scripts to configure your Secret Node."
-curl -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-docker.sh
+wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-docker.sh
 sleep 1
-curl -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-sgx.sh
+wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-sgx.sh
 sleep 1
-curl -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/start.sh
+wget -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/start.sh
 sleep 1
-curl -O install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-enigma-node.sh
+wget -O install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-enigma-node.sh
 sleep 1
-curl -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/upgrade.sh
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/upgrade.sh
 sleep 1
-curl -O install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-fixes.sh
+wget -O install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-fixes.sh
 sleep 1
-curl -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/uninstall.sh
+wget -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/uninstall.sh
 sleep 1
 
 echo "Change permissions for install sgx, install docker, start, & upgrade scripts."
