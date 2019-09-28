@@ -14,9 +14,9 @@ wget -O install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scr
 sleep 1
 wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/upgrade.sh
 sleep 1
-wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-fixes.sh
+wget -O install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/install-fixes.sh
 sleep 1
-wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/uninstall.sh
+wget -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/uninstall.sh
 sleep 1
 
 echo "Change permissions for install sgx, install docker, start, & upgrade scripts."
