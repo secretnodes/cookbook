@@ -2,6 +2,10 @@
 #Configured for ubuntu server 18.04
 #Version 0.2 ALTMETHOD | Sep 22, 2019
 
+echo "Installing Git"
+sudo apt-get install git
+sleep 1
+
 echo "Downloading Discovery-Docker-Network."
 git clone https://github.com/enigmampc/discovery-docker-network.git
 sleep 2
