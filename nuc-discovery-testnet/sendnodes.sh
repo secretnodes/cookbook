@@ -17,6 +17,8 @@ sleep 1
 wget -O install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-fixes.sh
 sleep 1
 wget -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/update-discovery-testnet.sh
+sleep 1
+wget -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/cli.sh
 #wget -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/uninstall.sh
 #sleep 1
 
@@ -34,6 +36,8 @@ sleep 1
 sudo chmod u+x ~/install-fixes.sh
 sleep 1
 sudo chmod u+x ~/update-discovery-testnet.sh
+sleep 1
+sudo chmod u+x ~/cli.sh
 sleep 1
 #sudo chmod u+x ~/uninstall.sh
 #sleep 1
