@@ -6,6 +6,6 @@
 
 echo "Downloading and installing enigma node software."
 echo "Discovery Testnet Beta."
-git clone https://github.com:enigmampc/discovery-testnet.git tmp/
+git clone https://github.com/enigmampc/discovery-testnet tmp/
 cp -R discovery-testnet/ tmp/
 sleep 2
