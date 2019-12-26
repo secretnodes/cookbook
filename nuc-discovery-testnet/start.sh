@@ -3,7 +3,7 @@
 #Version 0.15 | Dec 26, 2019
 
 echo "Checking for updates then running upgrade script."
-wget -N upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/upgrade.sh
+wget -n upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/upgrade.sh
 sleep 1
 bash upgrade.sh
 sleep 1
