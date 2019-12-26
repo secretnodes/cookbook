@@ -2,36 +2,36 @@
 #Configured for ubuntu server 18.04
 #Version 0.1 | Sep 22, 2019
 
-echo "===> Running step 1"
+echo $(date -u) "===> Running step 1" >> sendlogs.txt
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 
-echo "===> Running step 2"
+echo $(date -u) "===> Running step 2" >> sendlogs.txt
 sudo chmod +x /usr/local/bin/docker-compose
 
-echo "===> Running Step 4"
+echo $(date -u) "===> Running Step 4" >> sendlogs.txt
 sudo apt update
 
-echo "===> install prerequisite packages which let apt use packages over HTTPS"
+echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" >> sendlogs.txt
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 
-echo "===> Add the GPG key for the official Docker repository to your system"
+echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" >> sendlogs.txt
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-echo "===> Add the Docker repository to APT sources"
+echo $(date -u) "===> Add the Docker repository to APT sources" >> sendlogs.txt
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 
-echo "===> update the package database with the Docker packages from the newly added repo"
+echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" >> sendlogs.txt
 sudo apt update
 sudo apt upgrade
 
-echo "===>  install from the Docker repo instead of the default Ubuntu repo"
+echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" >> sendlogs.txt
 apt-cache policy docker-ce
 
-echo "===> Install Docker"
+echo $(date -u) "===> Install Docker" >> sendlogs.txt
 sudo apt install docker-ce
 
 echo "===> Verify Docker Compose installation was successful."
 echo "===> type : docker-compose --version"
-echo "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running"
+echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" >> sendlogs.txt
 echo "===> type : sudo systemctl status docker"
 echo "<3 from https://secretnodes.org"
