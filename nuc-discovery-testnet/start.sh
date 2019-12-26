@@ -7,8 +7,6 @@ wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/
 sleep 1
 wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-sgx.sh
 sleep 1
-wget -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/start.sh
-sleep 1
 wget -O install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-enigma-node.sh
 sleep 1
 wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/upgrade.sh
