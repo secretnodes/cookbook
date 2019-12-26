@@ -27,8 +27,6 @@ wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnode
 sleep 1
 wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/cli.sh
 sleep 1
-wget -N start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/start.sh
-sleep 1
 
 echo "Updating enigma testnet software."
 bash update-discovery-testnet.sh
