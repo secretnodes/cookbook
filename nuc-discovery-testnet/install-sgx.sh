@@ -8,10 +8,10 @@ sleep 5
 sudo apt install dpkg
 
 echo $(date -u) "To install the Intel® SGX PSW, first install the following tools" >> sendlogs.txt
-sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev
+sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev >> sendlogs.txt
 
 echo $(date -u) "To install the Intel® SGX SDK, install the following:" >> sendlogs.txt
-sudo apt-get install build-essential python
+sudo apt-get install build-essential python >> sendlogs.txt
 
 echo $(date -u) "Downloading the required SGX files." >> sendlogs.txt
 curl -O "https://download.01.org/intel-sgx/linux-2.6/ubuntu18.04-server/libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb"
@@ -29,17 +29,17 @@ chmod +x ./sgx_linux_x64_sdk_2.6.100.51363.bin
 sleep 1
 
 echo $(date -u) "Installing SGX driver." >> sendlogs.txt
-sudo ./sgx_linux_x64_driver_2.5.0_2605efa.bin
+sudo ./sgx_linux_x64_driver_2.5.0_2605efa.bin >> sendlogs.txt
 sleep 4
 
 echo $(date -u) "Installing psw" >> sendlogs.txt
-sudo dpkg -i ./libsgx-enclave-common_2.6.100.51363-bionic1_amd64.deb
+sudo dpkg -i ./libsgx-enclave-common_2.6.100.51363-bionic1_amd64.deb >> sendlogs.txt
 sleep 2
-sudo dpkg -i ./libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb
+sudo dpkg -i ./libsgx-enclave-common-dev_2.6.100.51363-bionic1_amd64.deb >> sendlogs.txt
 sleep 1
 
 echo $(date -u) "Installing SGX on Linux. Chose to install SGX in current directory, respond with 'no'." >> sendlogs.txt
-sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
+sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin >> sendlogs.txt
 sleep 2
 
 echo $(date -u) "Setting LD LIBRARY PATH" >> sendlogs.txt
