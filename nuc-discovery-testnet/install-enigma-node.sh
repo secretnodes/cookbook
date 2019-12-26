@@ -1,11 +1,11 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.30 NUC General | Dec 22, 2019
+#Version 0.32 NUC General | Dec 26, 2019
 #Tested on : 8i7BEK, ...
 # This is for the discovery testnet beta, NOTE THE NETWORK HAS NOT LAUNCHED.
 
-echo "Downloading and installing enigma node software."
-echo "Discovery Testnet Beta."
+echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
+echo $(date -u) "Discovery Testnet Beta." >> sendlogs.txt
 git clone https://github.com/enigmampc/discovery-testnet tmp/
 cp -R discovery-testnet/ tmp/
 sleep 2
