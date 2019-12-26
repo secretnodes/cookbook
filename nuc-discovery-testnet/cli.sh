@@ -5,7 +5,7 @@
 #Version 0.15 | Dec 26, 2019
 
 echo "Updating start.sh script"
-wget -N start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/start.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/start.sh
 sleep 1
 
 echo "Launching Discovery Testnet Beta CLI"
