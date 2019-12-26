@@ -1,9 +1,9 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.2 NUC General | Sep 26, 2019
+#Version 0.22 NUC General | Dec 26, 2019
 #Tested on : 8i7BEK, ...
 
-echo "Downloading scripts to configure your Secret Node."
+echo $(date -u) "Downloading scripts to configure your Secret Node." >> sendlogs.txt
 wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-docker.sh
 sleep 1
 wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-sgx.sh
@@ -22,7 +22,7 @@ wget -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnode
 #wget -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-general/uninstall.sh
 #sleep 1
 
-echo "Change permissions for install sgx, install docker, start, & upgrade scripts."
+echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/install-sgx.sh
 sleep 1
 sudo chmod u+x ~/install-docker.sh
@@ -42,30 +42,30 @@ sleep 1
 #sudo chmod u+x ~/uninstall.sh
 #sleep 1
 
-echo "Running upgrade.sh script."
+echo $(date -u) "Running upgrade.sh script." >> sendlogs.txt
 sudo bash upgrade.sh
 sleep 2
-echo "The script is not finished yet. Next we will install docker, please wait."
+echo $(date -u) "The script is not finished yet. Next we will install docker, please wait." >> sendlogs.txt
 
-echo "Running install-docker.sh script."
+echo $(date -u) "Running install-docker.sh script." >> sendlogs.txt
 sudo bash install-docker.sh
 sleep 2
-echo "The script is not finished yet. Next we will install sgx, please wait."
+echo $(date -u) "The script is not finished yet. Next we will install sgx, please wait." >> sendlogs.txt
 
-echo "Running install-sgx.sh script."
+echo $(date -u) "Running install-sgx.sh script." >> sendlogs.txt
 sudo bash install-sgx.sh
 sleep 2
 
-echo "Running install-enigma-node.sh"
+echo $(date -u) "Running install-enigma-node.sh" >> sendlogs.txt
 sudo bash install-enigma-node.sh
 sleep 2
 
-echo "Running install-fixes.sh"
+echo $(date -u) "Running install-fixes.sh" >> sendlogs.txt
 sudo bash install-fixes.sh
 sleep 2
 
-echo "Applying fixes."
+echo $(date -u) "Applying fixes." >> sendlogs.txt
 sudo bash install-fixes.sh
 sleep 2
 
-echo "<3 from https://secretnodes.org"
+echo $(date -u) "<3 from https://secretnodes.org" >> sendlogs.txt
