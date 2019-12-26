@@ -15,17 +15,17 @@ sudo apt-get autoclean
 sleep 2
 
 echo "Updating all scripts for configuring your Secret Node."
-wget -N install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-docker.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-docker.sh
 sleep 1
-wget -N install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-sgx.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-sgx.sh
 sleep 1
-wget -N install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-enigma-node.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-enigma-node.sh
 sleep 1
-wget -N install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-fixes.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/install-fixes.sh
 sleep 1
-wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/update-discovery-testnet.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/update-discovery-testnet.sh
 sleep 1
-wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/cli.sh
+wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/nuc-discovery-testnet/cli.sh
 sleep 1
 
 echo "Updating enigma testnet software."
