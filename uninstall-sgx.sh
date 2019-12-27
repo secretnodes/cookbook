@@ -6,10 +6,11 @@
 #Confirmed working on enigma.co testnet
 
 echo $(date -u) "Uninstalling the SGX Driver." >> sendlogs.txt
-bash sudo /sbin/modprobe -r isgx
-bash sudo rm -rf "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
-bash sudo /sbin/depmod
-bash sudo /bin/sed -i '/^isgx$/d' /etc/modules
+sudo service aesmd stop
+sudo /sbin/modprobe -r isgx
+sudo rm -rf "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
+sudo /sbin/depmod
+sudo /bin/sed -i '/^isgx$/d' /etc/modules
 
 echo $(date -u) "The SGX Driver should now be successfully removed." >> sendlogs.txt
 echo "<3 from https://secretnodes.org"
