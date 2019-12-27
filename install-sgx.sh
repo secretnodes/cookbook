@@ -26,9 +26,13 @@ sleep 2
 curl -O "https://download.01.org/intel-sgx/sgx-linux/2.7.1/distro/ubuntu18.04-server/sgx_linux_x64_sdk_2.7.101.3.bin"
 
 echo $(date -u) "Setting permissions for driver & SDK." >> sendlogs.txt
-chmod +x ./sgx_linux_x64_driver_2.5.0_2605efa.bin
+sudo chmod +x ./sgx_linux_x64_driver_2.6.0_4f5bb63.bin
 sleep 2
-chmod +x ./sgx_linux_x64_sdk_2.6.100.51363.bin
+sudo chmod +x ./sgx_linux_x64_sdk_2.7.101.3.bin
+sleep 1
+sudo chmod +x ./libsgx-enclave-common-dev_2.7.101.3-bionic1_amd64.deb
+sleep 2
+sudo chmod +x ./libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb
 sleep 1
 
 echo $(date -u) "Installing SGX driver." >> sendlogs.txt
