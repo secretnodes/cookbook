@@ -18,23 +18,23 @@ sudo apt-get autoclean
 sleep 2
 
 echo $(date -u) "Downloading scripts to configure your Secret Node." >> sendlogs.txt
-wget -N install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-docker.sh
+curl -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-docker.sh
 sleep 1
-wget -N install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh
+curl -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh
 sleep 1
-wget -N install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall-sgx.sh
+curl -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall-sgx.sh
 sleep 1
-wget -N start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/start.sh
+curl -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/start.sh
 sleep 1
-wget -N install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-enigma-node.sh
+curl -O install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-enigma-node.sh
 sleep 1
-wget -N sendnodes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/sendnodes.sh
+curl -O sendnodes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/sendnodes.sh
 sleep 1
-wget -N install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-fixes.sh
+curl -O install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-fixes.sh
 sleep 1
-wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/update-discovery-testnet.sh
+curl -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/update-discovery-testnet.sh
 sleep 1
-wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/cli.sh
+curl -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/cli.sh
 #wget -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall.sh
 #sleep 1
 
