@@ -36,13 +36,13 @@ sudo chmod +x ./libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb
 sleep 1
 
 echo $(date -u) "Installing SGX driver." >> sendlogs.txt
-sudo ./sgx_linux_x64_driver_2.6.0_4f5bb63.bin >> sendlogs.txt
+sudo ./sgx_linux_x64_driver_2.6.0_4f5bb63.bin
 sleep 4
 
 echo $(date -u) "Installing psw" >> sendlogs.txt
-sudo dpkg -i ./libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb >> sendlogs.txt
+sudo dpkg -i ./libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb
 sleep 2
-sudo dpkg -i ./libsgx-enclave-common-dev_2.7.101.3-bionic1_amd64.deb >> sendlogs.txt
+sudo dpkg -i ./libsgx-enclave-common-dev_2.7.101.3-bionic1_amd64.deb
 sleep 1
 
 echo $(date -u) "Installing SGX on Linux. Chose to install SGX in current directory, respond with 'no'." >> sendlogs.txt
