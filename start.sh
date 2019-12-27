@@ -5,12 +5,6 @@
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
 #Confirmed working on enigma.co testnet
 
-echo $(date -u) "Checking for updates then running upgrade script." >> sendlogs.txt
-wget -N https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
-sleep 1
-bash upgrade.sh
-sleep 1
-
 echo $(date -u) "Launch discovery testnet worker." >> sendlogs.txt
 cd discovery-testnet
 sleep 1
