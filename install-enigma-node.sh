@@ -1,8 +1,9 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.32 NUC General | Dec 26, 2019
-#Tested on : 8i7BEK, ...
-# This is for the discovery testnet beta, NOTE THE NETWORK HAS NOT LAUNCHED.
+#Version 0.75 | Dec 27, 2019
+#Tested on 8i7BEK
+#Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
+#Confirmed working on enigma.co testnet
 
 echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
 echo $(date -u) "Discovery Testnet Beta." >> sendlogs.txt

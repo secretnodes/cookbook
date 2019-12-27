@@ -1,6 +1,9 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.12 | Dec 26, 2019
+#Version 0.75 | Dec 27, 2019
+#Tested on 8i7BEK
+#Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
+#Confirmed working on enigma.co testnet
 
 echo $(date -u) "===> Running step 1" >> sendlogs.txt
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose

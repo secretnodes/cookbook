@@ -1,7 +1,9 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.22 NUC General | Dec 26, 2019
-#Tested on : 8i7BEK, ...
+#Version 0.75 | Dec 27, 2019
+#Tested on 8i7BEK
+#Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
+#Confirmed working on enigma.co testnet
 
 echo "Please report any issues you face at https://t.me/secretnodes"
 
