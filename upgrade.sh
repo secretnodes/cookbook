@@ -26,7 +26,7 @@ wget -N start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/st
 sleep 1
 wget -N install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-enigma-node.sh
 sleep 1
-wget -N upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
+wget -N sendnodes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/sendnodes.sh
 sleep 1
 wget -N install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-fixes.sh
 sleep 1
@@ -43,7 +43,7 @@ sudo chmod u+x ~/install-docker.sh
 sleep 1
 sudo chmod u+x ~/start.sh
 sleep 1
-sudo chmod u+x ~/upgrade.sh
+sudo chmod u+x ~/sendnodes.sh
 sleep 1
 sudo chmod u+x ~/install-enigma-node.sh
 sleep 1
