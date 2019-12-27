@@ -7,11 +7,11 @@
 
 echo $(date -u) "Uninstalling the SGX Driver." >> sendlogs.txt
 sudo service aesmd stop
-sudo rm -rf isgx
 sudo /sbin/modprobe -r isgx
 sudo rm -rf "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
 sudo /sbin/depmod
 sudo /bin/sed -i '/^isgx$/d' /etc/modules
+sudo rm -rf isgx
 
 echo $(date -u) "The SGX Driver should now be successfully removed." >> sendlogs.txt
 echo "<3 from https://secretnodes.org"
