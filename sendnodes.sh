@@ -6,8 +6,6 @@
 #Confirmed working on enigma.co testnet
 
 echo $(date -u) "Downloading scripts to configure your Secret Node." >> sendlogs.txt
-wget -N clear-scripts.sh https://raw.githubusercontent.com/secretnodes/scripts/master/refresh-scripts.sh
-sleep 1
 wget -N install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-docker.sh
 sleep 1
 wget -N install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh
@@ -27,8 +25,6 @@ wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnode
 #sleep 1
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
-sudo chmod u+x ~/refresh-scripts.sh
-sleep 1
 sudo chmod u+x ~/install-sgx.sh
 sleep 1
 sudo chmod u+x ~/install-docker.sh
