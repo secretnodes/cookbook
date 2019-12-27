@@ -7,6 +7,7 @@
 
 echo $(date -u) "Uninstalling the SGX Driver." >> sendlogs.txt
 sudo service aesmd stop
+sudo rm -rf isgx
 sudo /sbin/modprobe -r isgx
 sudo rm -rf "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
 sudo /sbin/depmod
