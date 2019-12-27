@@ -10,6 +10,8 @@ wget -N install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/
 sleep 1
 wget -N install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh
 sleep 1
+wget -N install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall-sgx.sh
+sleep 1
 wget -N start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/start.sh
 sleep 1
 wget -N install-enigma-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-enigma-node.sh
@@ -26,6 +28,8 @@ wget -N update-discovery-testnet.sh https://raw.githubusercontent.com/secretnode
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/install-sgx.sh
+sleep 1
+sudo chmod u+x ~/uninstall-sgx.sh
 sleep 1
 sudo chmod u+x ~/install-docker.sh
 sleep 1
