@@ -4,51 +4,86 @@
 #Tested on 8i7BEK
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
 #Confirmed working on enigma.co testnet
+#Forked from https://github.com/clcain/sgx-auto-install/
 
-echo "apt-get dpkg & update"
-sudo apt-get update
-sleep 5
-sudo apt install dpkg
+echo "- - - Installing packages - - - "
+sudo apt-get install -y build-essential ocaml ocamlbuild automake autoconf libtool wget python libssl-dev
+sudo apt-get install -y libssl-dev libcurl4-openssl-dev protobuf-compiler libprotobuf-dev debhelper cmake
+echo
 
-echo $(date -u) "To install the Intel® SGX PSW, first install the following tools" >> sendlogs.txt
-sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev >> sendlogs.txt
+echo "- - - Cloning sgx-software-enable repository - - -"
+cd ../
+git clone https://github.com/intel/sgx-software-enable.git
+cd sgx-software-enable/
+echo
 
-echo $(date -u) "To install the Intel® SGX SDK, install the following:" >> sendlogs.txt
-sudo apt-get install build-essential python >> sendlogs.txt
+echo "- - - Making sgx-software-enable - - -"
+make
+echo
 
-echo $(date -u) "Downloading the required SGX files." >> sendlogs.txt
-curl -O "https://download.01.org/intel-sgx/sgx-linux/2.7.1/distro/ubuntu18.04-server/libsgx-enclave-common-dev_2.7.101.3-bionic1_amd64.deb"
-sleep 2
-curl -O "https://download.01.org/intel-sgx/sgx-linux/2.7.1/distro/ubuntu18.04-server/libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb"
-sleep 2
-curl -O "https://download.01.org/intel-sgx/sgx-linux/2.7.1/distro/ubuntu18.04-server/sgx_linux_x64_driver_2.6.0_4f5bb63.bin"
-sleep 2
-curl -O "https://download.01.org/intel-sgx/sgx-linux/2.7.1/distro/ubuntu18.04-server/sgx_linux_x64_sdk_2.7.101.3.bin"
+echo "- - - Running sgx-software-enable - - -"
+sudo ./sgx_enable
+echo
 
-echo $(date -u) "Setting permissions for driver & SDK." >> sendlogs.txt
-sudo chmod +x ./sgx_linux_x64_driver_2.6.0_4f5bb63.bin
-sleep 2
-sudo chmod +x ./sgx_linux_x64_sdk_2.7.101.3.bin
-sleep 1
-sudo chmod +x ./libsgx-enclave-common-dev_2.7.101.3-bionic1_amd64.deb
-sleep 2
-sudo chmod +x ./libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb
-sleep 1
+echo "- - - Checking SGX status - - -"
+sudo ./sgx_enable --status
+echo
 
-echo $(date -u) "Installing SGX driver." >> sendlogs.txt
-sudo ./sgx_linux_x64_driver_2.6.0_4f5bb63.bin
-sleep 4
+echo "- - - Installing headers - - -"
+sudo apt-get install -y linux-headers-$(uname -r)
+echo
 
-echo $(date -u) "Installing psw" >> sendlogs.txt
-sudo dpkg -i ./libsgx-enclave-common_2.7.101.3-bionic1_amd64.deb
-sleep 2
-sudo dpkg -i ./libsgx-enclave-common-dev_2.7.101.3-bionic1_amd64.deb
-sleep 1
+echo "- - - Cloning linux-sgx-driver repository - - -"
+cd ../
+git clone https://github.com/intel/linux-sgx-driver.git
+cd linux-sgx-driver/
+echo
 
-echo $(date -u) "Installing SGX on Linux. Chose to install SGX in current directory, respond with 'no'." >> sendlogs.txt
-sudo ./sgx_linux_x64_sdk_2.7.101.3.bin >> sendlogs.txt
-sleep 2
+echo "- - - Building SGX driver - - -"
+sudo make
+echo
 
-echo $(date -u) "Setting LD LIBRARY PATH" >> sendlogs.txt
+echo "- - - Installing SGX driver - - -"
+sudo mkdir -p "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
+sudo cp isgx.ko "/lib/modules/"`uname -r`"/kernel/drivers/intel/sgx"
+sudo sh -c "cat /etc/modules | grep -Fxq isgx || echo isgx >> /etc/modules"
+sudo /sbin/depmod
+sudo /sbin/modprobe isgx
+echo
+
+echo "SGX driver installation complete."
+
+echo "- - - Cloning linux-sgx repository - - -"
+cd ../
+git clone https://github.com/intel/linux-sgx
+cd linux-sgx/
+git checkout sgx_2.7.1
+
+echo "- - - Downloading binaries - - -"
+./download_prebuilt.sh
+echo
+
+echo "- - - Compiling SGX SDK - - -"
+make -j 4 sdk
+echo
+
+cd linux/installer/bin/
+
+echo "- - - Building SGX SDK installer - - -"
+./build-installpkg.sh sdk
+echo
+
+echo "- - - Running SGX SDK installer - - -"
+echo yes | ./sgx_linux_x64_sdk_2.7.101.3.bin
+if ! grep "source $PWD/sgxsdk/environment" ~/.bashrc
+then
+    echo "source $PWD/sgxsdk/environment" >> ~/.bashrc
+fi
+. ~/.bashrc
+echo
+
+cd ../../../
+
+echo "SGX installation complete."
+
 echo "<3 from https://secretnodes.org"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
