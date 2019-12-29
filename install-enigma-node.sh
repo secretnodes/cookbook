@@ -7,6 +7,9 @@
 
 echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
 echo $(date -u) "Discovery Testnet Beta." >> sendlogs.txt
-git clone https://github.com/enigmampc/discovery-testnet tmpd1/
-cp -R discovery-testnet/ tmpd1/
+git clone https://github.com/enigmampc/discovery-testnet
+sleep 1
+cd discovery-testnet
+sleep 1
+git pull origin master
 sleep 2
