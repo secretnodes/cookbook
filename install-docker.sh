@@ -24,14 +24,14 @@ echo $(date -u) "===> Add the Docker repository to APT sources" >> sendlogs.txt
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 
 echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" >> sendlogs.txt
-sudo apt update >> sendlogs.txt
-sudo apt upgrade >> sendlogs.txt
+sudo apt update
+sudo apt upgrade
 
 echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" >> sendlogs.txt
-apt-cache policy docker-ce >> sendlogs.txt
+apt-cache policy docker-ce
 
 echo $(date -u) "===> Install Docker" >> sendlogs.txt
-sudo apt install docker-ce >> sendlogs.txt
+sudo apt install docker-ce
 
 echo "===> Verify Docker Compose installation was successful."
 echo "===> type : docker-compose --version"
