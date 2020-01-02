@@ -10,7 +10,7 @@ wget -O install-docker.sh https://raw.githubusercontent.com/secretnodes/scripts/
 sleep 1
 wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/install-sgx.sh
 sleep 1
-wget -O install-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall-sgx.sh
+wget -O uninstall-sgx.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall-sgx.sh
 sleep 1
 wget -O start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/start.sh
 sleep 1
