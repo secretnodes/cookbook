@@ -22,7 +22,7 @@ wget -O install-fixes.sh https://raw.githubusercontent.com/secretnodes/scripts/m
 sleep 1
 wget -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/update-discovery-testnet.sh
 sleep 1
-wget -O update-discovery-testnet.sh https://raw.githubusercontent.com/secretnodes/scripts/master/cli.sh
+wget -O cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/cli.sh
 #wget -O uninstall.sh https://raw.githubusercontent.com/secretnodes/scripts/master/uninstall.sh
 #sleep 1
 
