@@ -7,5 +7,5 @@
 
 echo $(date -u) "Updating enigma node software." >> sendlogs.txt
 echo "Discovery Testnet Beta."
-docker pull enigmampc/external_worker_hw:testnet >> sendlogs.txt
+sudo docker pull enigmampc/external_worker_hw:testnet
 sleep 1
