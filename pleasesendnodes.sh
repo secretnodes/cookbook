@@ -97,6 +97,7 @@ sleep 3
 
 echo $(date -u) "===> Running step 1" >> sendlogs.txt
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sleep 2
 
 echo $(date -u) "===> Running step 2" >> sendlogs.txt
 sudo chmod +x /usr/local/bin/docker-compose
@@ -109,9 +110,11 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 
 echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" >> sendlogs.txt
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sleep 2
 
 echo $(date -u) "===> Add the Docker repository to APT sources" >> sendlogs.txt
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sleep 2
 
 echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" >> sendlogs.txt
 sudo apt update
