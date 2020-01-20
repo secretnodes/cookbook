@@ -11,6 +11,8 @@ echo $(date -u) "Implimenting fix for docker caused networking issue https://git
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 echo $(date -u) "Note: To upgrade all scripts, you must merely run sendnodes.sh again." >> sendlogs.txt
 
+sleep 4
+
 #Forked from https://github.com/clcain/sgx-auto-install/
 
 echo "- - - Installing packages - - - "
@@ -93,7 +95,7 @@ cd ../../../
 
 echo "SGX installation complete."
 
-sleep 3
+sleep 5
 
 echo $(date -u) "===> Running step 1" >> sendlogs.txt
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
