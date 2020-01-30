@@ -182,4 +182,13 @@ sleep 1
 sudo chmod u+x ~/eth-stop.sh
 sleep 1
 
+echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
+echo $(date -u) "Discovery Testnet Beta." >> sendlogs.txt
+git clone https://github.com/enigmampc/discovery-testnet
+sleep 1
+cd discovery-testnet
+sleep 1
+git pull origin master
+sleep 2
+
 echo "<3 from https://secretnodes.org"
