@@ -150,8 +150,6 @@ wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/maste
 sleep 2
 wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
 sleep 2
-wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
-sleep 2
 wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-kovan.sh
 sleep 2
 wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
@@ -166,15 +164,9 @@ sudo chmod u+x ~/eng-start.sh
 sleep 1
 sudo chmod u+x ~/upgrade.sh
 sleep 1
-sudo chmod u+x ~/eth-console.sh
-sleep 1
 sudo chmod u+x ~/eth-create.sh
 sleep 1
-sudo chmod u+x ~/eth-logs.sh
-sleep 1
 sudo chmod u+x ~/eth-remove.sh
-sleep 1
-sudo chmod u+x ~/eth-start.sh
 sleep 1
 sudo chmod u+x ~/eth-stop.sh
 sleep 1

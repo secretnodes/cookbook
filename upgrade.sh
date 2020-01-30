@@ -30,8 +30,6 @@ wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/maste
 sleep 2
 wget -O eng-provision.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-provision.sh
 sleep 2
-wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
-sleep 2
 wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-kovan.sh
 sleep 2
 wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
@@ -44,13 +42,11 @@ sudo chmod u+x ~/eng-cli.sh
 sleep 1
 sudo chmod u+x ~/eng-start.sh
 sleep 1
-sudo chmod u+x ~/eth-console.sh
+sudo chmod u+x ~/eng-provision.sh
 sleep 1
-sudo chmod u+x ~/eth-create.sh
+sudo chmod u+x ~/eth-kovan.sh
 sleep 1
 sudo chmod u+x ~/eth-remove.sh
-sleep 1
-sudo chmod u+x ~/eth-start.sh
 sleep 1
 sudo chmod u+x ~/eth-stop.sh
 sleep 1
