@@ -1,6 +1,6 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.85 | Jan 30, 2020
+#Version 0.9 | Jan 30, 2020
 #Tested on 8i7BEK & 8i3BEH
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
 #Confirmed working on enigma.co testnet
@@ -144,23 +144,20 @@ git pull origin master
 sleep 2
 
 echo $(date -u) "Downloading scripts from secretnodes.org" >> sendlogs.txt
-wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
+wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-cli.sh
 sleep 2
-wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-start.sh
+wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-start.sh
 sleep 2
-wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/upgrade.sh
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
 sleep 2
-wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-console.sh
+wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
 sleep 2
-wget -O eth-create.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-create.sh
+wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-kovan.sh
 sleep 2
-wget -O eth-logs.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-logs.sh
+wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
 sleep 2
-wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-remove.sh
+wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-stop.sh
 sleep 2
-wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
-sleep 2
-wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-stop.sh
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/eng-cli.sh
@@ -181,14 +178,5 @@ sudo chmod u+x ~/eth-start.sh
 sleep 1
 sudo chmod u+x ~/eth-stop.sh
 sleep 1
-
-echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
-echo $(date -u) "Discovery Testnet Beta." >> sendlogs.txt
-git clone https://github.com/enigmampc/discovery-testnet
-sleep 1
-cd discovery-testnet
-sleep 1
-git pull origin master
-sleep 2
 
 echo "<3 from https://secretnodes.org"
