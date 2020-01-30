@@ -23,21 +23,21 @@ sudo docker pull enigmampc/external_worker_hw:testnet
 sleep 1
 
 echo $(date -u) "Downloading scripts from secretnodes.org" >> sendlogs.txt
-wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-cli.sh
+wget -N eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-cli.sh
 sleep 2
-wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-start.sh
+wget -N eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-start.sh
 sleep 2
-wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
+wget -N eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
 sleep 2
-wget -O eth-create.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-create.sh
+wget -N eth-create.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-create.sh
 sleep 2
-wget -O eth-logs.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-logs.sh
+wget -N eth-logs.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-logs.sh
 sleep 2
-wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
+wget -N eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
 sleep 2
-wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-start.sh
+wget -N eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-start.sh
 sleep 2
-wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-stop.sh
+wget -N eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-stop.sh
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/eng-cli.sh
