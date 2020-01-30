@@ -30,11 +30,9 @@ wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/maste
 sleep 2
 wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
 sleep 2
-wget -O eth-create.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-create.sh
+wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-kovan.sh
 sleep 2
 wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
-sleep 2
-wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-start.sh
 sleep 2
 wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-stop.sh
 
