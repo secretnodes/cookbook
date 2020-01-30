@@ -1,7 +1,7 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.8 | Jan 19, 2020
-#Tested on 8i7BEK
+#Version 0.85 | Jan 30, 2020
+#Tested on 8i7BEK & 8i3BEH
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
 #Confirmed working on enigma.co testnet
 
@@ -94,9 +94,9 @@ echo
 cd ../../../
 
 echo "SGX installation complete."
+sleep 2
 
-sleep 5
-
+echo "Installing Docker & Docker Compose."
 echo $(date -u) "===> Running step 1" >> sendlogs.txt
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sleep 2
@@ -109,6 +109,7 @@ sudo apt update
 
 echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" >> sendlogs.txt
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sleep 2
 
 echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" >> sendlogs.txt
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -132,8 +133,53 @@ echo "===> Verify Docker Compose installation was successful."
 echo "===> type : docker-compose --version"
 echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" >> sendlogs.txt
 echo "===> type : sudo systemctl status docker"
-
 sleep 3
 
+echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
+git clone https://github.com/enigmampc/discovery-testnet
+sleep 2
+cd discovery-testnet
+sleep 1
+git pull origin master
+sleep 2
+
+echo $(date -u) "Downloading scripts from secretnodes.org" >> sendlogs.txt
+wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-cli.sh
+sleep 2
+wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-start.sh
+sleep 2
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
+sleep 2
+wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-console.sh
+sleep 2
+wget -O eth-create.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-create.sh
+sleep 2
+wget -O eth-logs.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-logs.sh
+sleep 2
+wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
+sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-start.sh
+sleep 2
+wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-stop.sh
+
+echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
+sudo chmod u+x ~/eng-cli.sh
+sleep 1
+sudo chmod u+x ~/eng-start.sh
+sleep 1
+sudo chmod u+x ~/upgrade.sh
+sleep 1
+sudo chmod u+x ~/eth-console.sh
+sleep 1
+sudo chmod u+x ~/eth-create.sh
+sleep 1
+sudo chmod u+x ~/eth-logs.sh
+sleep 1
+sudo chmod u+x ~/eth-remove.sh
+sleep 1
+sudo chmod u+x ~/eth-start.sh
+sleep 1
+sudo chmod u+x ~/eth-stop.sh
+sleep 1
 
 echo "<3 from https://secretnodes.org"
