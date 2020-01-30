@@ -32,8 +32,6 @@ wget -O eth-console.sh https://raw.githubusercontent.com/secretnodes/scripts/mas
 sleep 2
 wget -O eth-create.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-create.sh
 sleep 2
-wget -O eth-logs.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-logs.sh
-sleep 2
 wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
 sleep 2
 wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-start.sh
@@ -48,8 +46,6 @@ sleep 1
 sudo chmod u+x ~/eth-console.sh
 sleep 1
 sudo chmod u+x ~/eth-create.sh
-sleep 1
-sudo chmod u+x ~/eth-logs.sh
 sleep 1
 sudo chmod u+x ~/eth-remove.sh
 sleep 1
