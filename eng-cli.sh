@@ -8,4 +8,4 @@
 echo $(date -u) "Launching Discovery Testnet Beta CLI" >> sendlogs.txt
 cd discovery-testnet
 sleep 1
-sudo docker exec -it worker cli
+docker exec -it worker cli

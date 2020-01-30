@@ -135,7 +135,9 @@ echo $(date -u) "===> Docker should now be installed, the daemon started, and th
 echo "===> type : sudo systemctl status docker"
 sleep 3
 
-echo "==> Enabling docker without sudo."
+echo "==> Enabling docker without sudo!"
+sudo groupadd docker
+sleep 2
 sudo gpasswd -a $USER docker
 sleep 2
 sudo service docker restart
