@@ -5,4 +5,4 @@
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal.
 #Confirmed working on enigma.co testnet
 
-docker start ethereum-kovan-full
+docker start ethereum-kovan
