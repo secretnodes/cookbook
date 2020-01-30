@@ -5,8 +5,8 @@
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal.
 #Confirmed working on enigma.co testnet
 
-docker stop ethereum-kovan
+docker stop eth
 
-docker rm ethereum-kovan
+docker rm eth
 
 rm -rvf ~/.parity-kovan

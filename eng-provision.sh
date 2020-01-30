@@ -135,6 +135,11 @@ echo $(date -u) "===> Docker should now be installed, the daemon started, and th
 echo "===> type : sudo systemctl status docker"
 sleep 3
 
+echo "==> Enabling docker without sudo."
+sudo gpasswd -a $USER docker
+sleep 2
+sudo service docker restart
+
 echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
 git clone https://github.com/enigmampc/discovery-testnet
 sleep 2
