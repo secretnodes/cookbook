@@ -36,6 +36,8 @@ wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/cana
 sleep 2
 wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-stop.sh
 sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
+sleep 2
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/eng-cli.sh
@@ -49,6 +51,8 @@ sleep 1
 sudo chmod u+x ~/eth-remove.sh
 sleep 1
 sudo chmod u+x ~/eth-stop.sh
+sleep 1
+sudo chmod u+x ~/eth-start.sh
 sleep 1
 
 echo "Complete!"
