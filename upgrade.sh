@@ -21,6 +21,7 @@ sleep 2
 echo $(date -u) "Updating enigma testnet software." >> sendlogs.txt
 sudo docker pull enigmampc/external_worker_hw:testnet
 sleep 1
+sudo docker pull parity/parity:stable
 
 echo $(date -u) "Downloading scripts from secretnodes.org" >> sendlogs.txt
 wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-cli.sh
