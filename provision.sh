@@ -99,6 +99,55 @@ sleep 2
 # Back to root directory test
 cd ~
 
+echo "Installing Docker & Docker Compose."
+echo $(date -u) "===> Running step 1" >> sendlogs.txt
+sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sleep 2
+
+echo $(date -u) "===> Running step 2" >> sendlogs.txt
+sudo chmod +x /usr/local/bin/docker-compose
+
+echo $(date -u) "===> Running Step 4" >> sendlogs.txt
+sudo apt update
+
+echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" >> sendlogs.txt
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sleep 2
+
+echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" >> sendlogs.txt
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sleep 2
+
+echo $(date -u) "===> Add the Docker repository to APT sources" >> sendlogs.txt
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sleep 2
+
+echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" >> sendlogs.txt
+sudo apt update
+sudo apt upgrade
+
+echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" >> sendlogs.txt
+apt-cache policy docker-ce
+
+echo $(date -u) "===> Install Docker" >> sendlogs.txt
+sudo apt install docker-ce
+
+echo "===> Verify Docker Compose installation was successful."
+echo "===> type : docker-compose --version"
+echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" >> sendlogs.txt
+echo "===> type : sudo systemctl status docker"
+sleep 3
+
+echo "==> Enabling docker without sudo!"
+sudo groupadd docker
+sleep 2
+sudo gpasswd -a $USER docker
+sleep 2
+sudo service docker restart
+sleep 2
+cd ~
+sleep 1
+
 echo $(date -u) "Downloading scripts from secretnodes.org"
 wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
 sleep 2
@@ -140,17 +189,5 @@ git pull origin master
 sleep 2
 cd ~
 sleep 1
-
-echo $(date -u) "===> Install docker & docker-compose"
-sudo apt install -y docker.io docker-compose
-
-echo $(date -u) "===> Make docker non-root: https://docs.docker.com/install/linux/linux-postinstall/"
-sudo groupadd docker
-sleep 1
-sudo usermod -aG docker $USER
-sleep 2
-echo $(date -u) "===>  Restart Docker."
-sudo service docker restart
-sleep 3
 
 echo "<3 from https://secretnodes.org"
