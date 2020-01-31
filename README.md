@@ -12,8 +12,22 @@ wget https://raw.githubusercontent.com/secretnodes/scripts/canary/provision.sh
 ```bash
 sudo bash provision.sh
 ```
-3. Go back and start at step 1 in the "Prepare your Ethereum Kovan Full Node" Guide above.
+3. Run the following command:
+```bash
+sudo gpasswd -a $USER docker
+```
 
+4. Run the following command:
+```bash
+newgrp docker
+```
+
+5. Run the following command:
+```bash
+docker ps
+```
+
+If the command returns a permission error, then reboot your machine and try again from step 3.
 
 # Prepare your Ethereum Kovan Full Node
 
