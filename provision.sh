@@ -188,10 +188,5 @@ sleep 2
 cd ~
 sleep 1
 
-# Linux post-install
-sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo systemctl enable docker
-
 echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
 echo "<3 from https://secretnodes.org"
