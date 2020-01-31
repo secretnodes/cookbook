@@ -180,11 +180,6 @@ sleep 1
 sudo chmod u+x ~/eng-stop.sh
 sleep 1
 
-echo $(date -u) "Docker post-install script. Run docker without Sudo."
-sudo groupadd docker
-sudo gpasswd -a $USER docker
-
 echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
-echo "-------------Please reboot your computer before continuing--------"
 echo "<3 from https://secretnodes.org"
-newgrp docker
+
