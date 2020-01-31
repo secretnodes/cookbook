@@ -96,19 +96,8 @@ cd ../../../
 echo "SGX installation complete."
 sleep 2
 
-echo $(date -u) "===> Install docker & docker-compose"
-sudo apt install -y docker.io docker-compose
-
-echo $(date -u) "===> Make docker non-root: https://docs.docker.com/install/linux/linux-postinstall/"
-sudo groupadd docker
-sleep 1
-sudo usermod -aG docker $USER
-echo $(date -u) "===>  logout & log back in"
-sleep 1
-newgrp docker
-sleep 1
-sudo service docker restart
-sleep 3
+# Back to root directory test
+cd ~
 
 echo $(date -u) "Downloading scripts from secretnodes.org"
 wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
@@ -149,5 +138,19 @@ cd discovery-testnet
 sleep 1
 git pull origin master
 sleep 2
+cd ~
+sleep 1
+
+echo $(date -u) "===> Install docker & docker-compose"
+sudo apt install -y docker.io docker-compose
+
+echo $(date -u) "===> Make docker non-root: https://docs.docker.com/install/linux/linux-postinstall/"
+sudo groupadd docker
+sleep 1
+sudo usermod -aG docker $USER
+sleep 2
+echo $(date -u) "===>  Restart Docker."
+sudo service docker restart
+sleep 3
 
 echo "<3 from https://secretnodes.org"
