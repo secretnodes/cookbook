@@ -38,9 +38,9 @@ wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary
 sleep 2
 wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
 sleep 2
-wget -O eth-node.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-node.sh
+wget -O eng-node.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-node.sh
 sleep 2
-wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-stop.sh
+wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-stop.sh
 sleep 2
 wget -O readme.md https://raw.githubusercontent.com/secretnodes/scripts/canary/README.md
 sleep 2
