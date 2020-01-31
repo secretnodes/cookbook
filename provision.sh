@@ -188,7 +188,7 @@ sleep 2
 cd ~
 sleep 1
 
-# Linux post-install
+echo $(date -u) "Docker post-install script. Run docker without Sudo."
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
