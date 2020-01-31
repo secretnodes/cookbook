@@ -18,12 +18,12 @@ sudo apt-get autoclean
 sleep 2
 
 
-echo $(date -u) "Updating enigma testnet software." >> sendlogs.txt
+echo $(date -u) "Updating enigma testnet software." 
 sudo docker pull enigmampc/external_worker_hw:testnet
 sleep 1
 sudo docker pull parity/parity:stable
 
-echo $(date -u) "Downloading scripts from secretnodes.org" >> sendlogs.txt
+echo $(date -u) "Downloading scripts from secretnodes.org" 
 wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
 sleep 2
 wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-start.sh
@@ -39,7 +39,7 @@ sleep 2
 wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
 sleep 2
 
-echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
+echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." 
 sudo chmod u+x ~/eng-cli.sh
 sleep 1
 sudo chmod u+x ~/eng-start.sh

@@ -100,41 +100,41 @@ sleep 2
 cd ~
 
 echo "Installing Docker & Docker Compose."
-echo $(date -u) "===> Running step 1" >> sendlogs.txt
+echo $(date -u) "===> Running step 1" 
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sleep 2
 
-echo $(date -u) "===> Running step 2" >> sendlogs.txt
+echo $(date -u) "===> Running step 2" 
 sudo chmod +x /usr/local/bin/docker-compose
 
-echo $(date -u) "===> Running Step 4" >> sendlogs.txt
+echo $(date -u) "===> Running Step 4" 
 sudo apt update
 
-echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" >> sendlogs.txt
+echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 sleep 2
 
-echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" >> sendlogs.txt
+echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sleep 2
 
-echo $(date -u) "===> Add the Docker repository to APT sources" >> sendlogs.txt
+echo $(date -u) "===> Add the Docker repository to APT sources" 
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sleep 2
 
-echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" >> sendlogs.txt
+echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" 
 sudo apt update
 sudo apt upgrade
 
-echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" >> sendlogs.txt
+echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" 
 apt-cache policy docker-ce
 
-echo $(date -u) "===> Install Docker" >> sendlogs.txt
+echo $(date -u) "===> Install Docker" 
 sudo apt install docker-ce
 
 echo "===> Verify Docker Compose installation was successful."
 echo "===> type : docker-compose --version"
-echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" >> sendlogs.txt
+echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" 
 echo "===> type : sudo systemctl status docker"
 sleep 3
 
@@ -164,7 +164,7 @@ sleep 2
 wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
 sleep 2
 
-echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
+echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." 
 sudo chmod u+x ~/eng-cli.sh
 sleep 1
 sudo chmod u+x ~/eng-start.sh
