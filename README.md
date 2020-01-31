@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
 bash eth-start.sh
 ```
 
-If you do not already have Docker & Docker Compose installed, then do this.
+# If you do not already have Docker & Docker Compose installed, then do this.
 
 1. Download our node provision script.
 ```bash
