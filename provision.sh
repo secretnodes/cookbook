@@ -153,6 +153,10 @@ wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary
 sleep 2
 wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
 sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-node.sh
+sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-stop.sh
+sleep 2
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/eng-cli.sh
@@ -161,13 +165,17 @@ sudo chmod u+x ~/eng-start.sh
 sleep 1
 sudo chmod u+x ~/upgrade.sh
 sleep 1
-sudo chmod u+x ~/eth-create.sh
+sudo chmod u+x ~/eth-kovan.sh
 sleep 1
 sudo chmod u+x ~/eth-remove.sh
 sleep 1
 sudo chmod u+x ~/eth-stop.sh
 sleep 1
 sudo chmod u+x ~/eth-start.sh
+sleep 1
+sudo chmod u+x ~/eng-node.sh
+sleep 1
+sudo chmod u+x ~/eng-stop.sh
 sleep 1
 
 echo $(date -u) "Downloading and installing enigma node software."
@@ -180,4 +188,5 @@ sleep 2
 cd ~
 sleep 1
 
+echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
 echo "<3 from https://secretnodes.org"
