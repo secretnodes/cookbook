@@ -180,16 +180,6 @@ sleep 1
 sudo chmod u+x ~/eng-stop.sh
 sleep 1
 
-echo $(date -u) "Downloading and installing enigma node software."
-git clone https://github.com/enigmampc/discovery-testnet
-sleep 2
-cd discovery-testnet
-sleep 1
-git pull origin master
-sleep 2
-cd ~
-sleep 1
-
 echo $(date -u) "Docker post-install script. Run docker without Sudo."
 sudo groupadd docker
 sudo gpasswd -a $USER docker
