@@ -8,7 +8,7 @@ These scripts are meant to empower node runners. More information will be added 
 wget https://raw.githubusercontent.com/secretnodes/scripts/canary/provision.sh
 ```
 
-2. Run the secretnodes.org provision script.
+2. Run the secretnodes.org provision script. Be sure to respond with "y" or "yes" to all inquiries.
 ```bash
 sudo bash provision.sh
 ```
