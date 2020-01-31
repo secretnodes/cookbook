@@ -23,12 +23,12 @@ sudo docker pull enigmampc/external_worker_hw:testnet
 sleep 1
 sudo docker pull parity/parity:stable
 
-echo $(date -u) "Downloading scripts from secretnodes.org" >> sendlogs.txt
+echo $(date -u) "Downloading scripts from secretnodes.org"
 wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
 sleep 2
 wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-start.sh
 sleep 2
-wget -O eng-provision.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-provision.sh
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/provision.sh
 sleep 2
 wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-kovan.sh
 sleep 2
@@ -38,13 +38,17 @@ wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary
 sleep 2
 wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
 sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-node.sh
+sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-stop.sh
+sleep 2
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." >> sendlogs.txt
 sudo chmod u+x ~/eng-cli.sh
 sleep 1
 sudo chmod u+x ~/eng-start.sh
 sleep 1
-sudo chmod u+x ~/eng-provision.sh
+sudo chmod u+x ~/provision.sh
 sleep 1
 sudo chmod u+x ~/eth-kovan.sh
 sleep 1
@@ -53,6 +57,10 @@ sleep 1
 sudo chmod u+x ~/eth-stop.sh
 sleep 1
 sudo chmod u+x ~/eth-start.sh
+sleep 1
+sudo chmod u+x ~/eng-node.sh
+sleep 1
+sudo chmod u+x ~/eng-stop.sh
 sleep 1
 
 echo "Complete!"
