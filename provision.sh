@@ -194,7 +194,7 @@ echo $(date -u) "Docker post-install script. Run docker without Sudo."
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
-newgrp docker
 
 echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
 echo "<3 from https://secretnodes.org"
+newgrp docker
