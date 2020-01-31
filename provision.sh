@@ -138,16 +138,6 @@ echo $(date -u) "===> Docker should now be installed, the daemon started, and th
 echo "===> type : sudo systemctl status docker"
 sleep 3
 
-echo "==> Enabling docker without sudo!"
-sudo groupadd docker
-sleep 2
-sudo gpasswd -a $USER docker
-sleep 2
-sudo service docker restart
-sleep 2
-cd ~
-sleep 1
-
 echo $(date -u) "Downloading scripts from secretnodes.org"
 wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
 sleep 2
