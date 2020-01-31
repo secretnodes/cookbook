@@ -192,8 +192,7 @@ sleep 1
 
 echo $(date -u) "Docker post-install script. Run docker without Sudo."
 sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo systemctl enable docker
+sudo gpasswd -a $USER docker
 
 echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
 echo "<3 from https://secretnodes.org"
