@@ -139,27 +139,27 @@ echo "===> type : sudo systemctl status docker"
 sleep 3
 
 echo $(date -u) "Downloading scripts from secretnodes.org"
-wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
+wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-cli.sh
 sleep 2
-wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-start.sh
+wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-start.sh
 sleep 2
-wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/upgrade.sh
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/master/upgrade.sh
 sleep 2
-wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-kovan.sh
+wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-kovan.sh
 sleep 2
-wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-remove.sh
+wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-remove.sh
 sleep 2
-wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-stop.sh
+wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-stop.sh
 sleep 2
-wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eth-start.sh
 sleep 2
-wget -O eng-node.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-node.sh
+wget -O eng-node.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-node.sh
 sleep 2
-wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-stop.sh
+wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/master/eng-stop.sh
 sleep 2
-wget -O readme.md https://raw.githubusercontent.com/secretnodes/scripts/canary/README.md
+wget -O readme.md https://raw.githubusercontent.com/secretnodes/scripts/master/README.md
 sleep 2
-wget -O deprovsion.md https://raw.githubusercontent.com/secretnodes/scripts/canary/deprovision.md
+wget -O deprovsion.md https://raw.githubusercontent.com/secretnodes/scripts/master/deprovision.md
 sleep 2
 
 echo $(date -u) "Change permissions for scripts." 
