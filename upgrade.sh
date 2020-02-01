@@ -44,6 +44,8 @@ wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary
 sleep 2
 wget -O readme.md https://raw.githubusercontent.com/secretnodes/scripts/canary/README.md
 sleep 2
+wget -O deprovsion.md https://raw.githubusercontent.com/secretnodes/scripts/canary/deprovision.md
+sleep 2
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." 
 sudo chmod u+x ~/eng-cli.sh
@@ -63,6 +65,8 @@ sleep 1
 sudo chmod u+x ~/eng-node.sh
 sleep 1
 sudo chmod u+x ~/eng-stop.sh
+sleep 1
+sudo chmod u+x ~/deprovision.sh
 sleep 1
 
 echo "Complete!"
