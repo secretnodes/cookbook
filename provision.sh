@@ -1,19 +1,19 @@
 #!/bin/bash
 #Configured for ubuntu server 18.04
-#Version 0.8 | Jan 19, 2020
-#Tested on 8i7BEK
+#Version 0.9 | Jan 31, 2020
+#Tested on 8i7BEK & 8i3BEH
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
 #Confirmed working on enigma.co testnet
 
 echo "Please report any issues you face at https://t.me/secretnodes"
 
-echo $(date -u) "Implimenting fix for docker caused networking issue https://github.com/docker/libnetwork/issues/2187" >> sendlogs.txt
+echo $(date -u) "Implimenting fix for docker caused networking issue https://github.com/docker/libnetwork/issues/2187" 
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
-echo $(date -u) "Note: To upgrade all scripts, you must merely run sendnodes.sh again." >> sendlogs.txt
+echo $(date -u) "Note: To upgrade all scripts, you must merely run upgrade.sh again."
 
 sleep 4
 
-#Forked from https://github.com/clcain/sgx-auto-install/
+echo $(date -u) "Installing SGX Drivers #Forked from https://github.com/clcain/sgx-auto-install/" 
 
 echo "- - - Installing packages - - - "
 sudo apt-get install -y build-essential ocaml ocamlbuild automake autoconf libtool wget python libssl-dev
@@ -94,46 +94,96 @@ echo
 cd ../../../
 
 echo "SGX installation complete."
+sleep 2
 
-sleep 5
+# Back to root directory test
+cd ~
 
-echo $(date -u) "===> Running step 1" >> sendlogs.txt
+echo "Installing Docker & Docker Compose."
+echo $(date -u) "===> Running step 1" 
 sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sleep 2
 
-echo $(date -u) "===> Running step 2" >> sendlogs.txt
+echo $(date -u) "===> Running step 2" 
 sudo chmod +x /usr/local/bin/docker-compose
 
-echo $(date -u) "===> Running Step 4" >> sendlogs.txt
+echo $(date -u) "===> Running Step 4" 
 sudo apt update
 
-echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" >> sendlogs.txt
+echo $(date -u) "===> install prerequisite packages which let apt use packages over HTTPS" 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sleep 2
 
-echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" >> sendlogs.txt
+echo $(date -u) "===> Add the GPG key for the official Docker repository to your system" 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sleep 2
 
-echo $(date -u) "===> Add the Docker repository to APT sources" >> sendlogs.txt
+echo $(date -u) "===> Add the Docker repository to APT sources" 
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sleep 2
 
-echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" >> sendlogs.txt
+echo $(date -u) "===> update the package database with the Docker packages from the newly added repo" 
 sudo apt update
 sudo apt upgrade
 
-echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" >> sendlogs.txt
+echo $(date -u) "===>  install from the Docker repo instead of the default Ubuntu repo" 
 apt-cache policy docker-ce
 
-echo $(date -u) "===> Install Docker" >> sendlogs.txt
+echo $(date -u) "===> Install Docker" 
 sudo apt install docker-ce
 
 echo "===> Verify Docker Compose installation was successful."
 echo "===> type : docker-compose --version"
-echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" >> sendlogs.txt
+echo $(date -u) "===> Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running" 
 echo "===> type : sudo systemctl status docker"
-
 sleep 3
 
+echo $(date -u) "Downloading scripts from secretnodes.org"
+wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-cli.sh
+sleep 2
+wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-start.sh
+sleep 2
+wget -O upgrade.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/upgrade.sh
+sleep 2
+wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-kovan.sh
+sleep 2
+wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-remove.sh
+sleep 2
+wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-stop.sh
+sleep 2
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eth-start.sh
+sleep 2
+wget -O eng-node.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-node.sh
+sleep 2
+wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/scripts/canary/eng-stop.sh
+sleep 2
+wget -O readme.md https://raw.githubusercontent.com/secretnodes/scripts/canary/README.md
+sleep 2
+wget -O deprovsion.md https://raw.githubusercontent.com/secretnodes/scripts/canary/deprovision.md
+sleep 2
 
+echo $(date -u) "Change permissions for scripts." 
+sudo chmod u+x ~/eng-cli.sh
+sleep 1
+sudo chmod u+x ~/eng-start.sh
+sleep 1
+sudo chmod u+x ~/upgrade.sh
+sleep 1
+sudo chmod u+x ~/eth-kovan.sh
+sleep 1
+sudo chmod u+x ~/eth-remove.sh
+sleep 1
+sudo chmod u+x ~/eth-stop.sh
+sleep 1
+sudo chmod u+x ~/eth-start.sh
+sleep 1
+sudo chmod u+x ~/eng-node.sh
+sleep 1
+sudo chmod u+x ~/eng-stop.sh
+sleep 1
+sudo chmod u+x ~/deprovision.sh
+sleep 1
+
+echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
 echo "<3 from https://secretnodes.org"
+
