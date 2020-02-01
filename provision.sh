@@ -9,7 +9,7 @@ echo "Please report any issues you face at https://t.me/secretnodes"
 
 echo $(date -u) "Implimenting fix for docker caused networking issue https://github.com/docker/libnetwork/issues/2187" 
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
-echo $(date -u) "Note: To upgrade all scripts, you must merely run upgrade.sh again."
+echo $(date -u) "Note: To upgrade all scripts, you must merely run upgrade.sh."
 
 sleep 4
 
