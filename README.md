@@ -1,6 +1,8 @@
 # scripts
 These scripts are meant to empower node runners. More information will be added as time goes on.
 
+[![asciicast](https://asciinema.org/a/297118.svg)](https://asciinema.org/a/297118)
+
 # Provision your machine with software needed to run Enigma Secret Nodes & Ethereum Nodes.
 
 1. Download our node provision script.
