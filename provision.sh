@@ -13,7 +13,7 @@ echo $(date -u) "Note: To upgrade all scripts, you must merely run upgrade.sh ag
 
 sleep 4
 
-#Forked from https://github.com/clcain/sgx-auto-install/
+echo $(date -u) "Installing SGX Drivers #Forked from https://github.com/clcain/sgx-auto-install/" 
 
 echo "- - - Installing packages - - - "
 sudo apt-get install -y build-essential ocaml ocamlbuild automake autoconf libtool wget python libssl-dev

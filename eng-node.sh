@@ -7,7 +7,7 @@
 
 echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
 
-echo $(date -u) "Downloading and installing enigma node software." >> sendlogs.txt
+echo $(date -u) "Downloading and installing enigma node software."
 git clone https://github.com/enigmampc/discovery-testnet
 sleep 2
 cd discovery-testnet

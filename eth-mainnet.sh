@@ -11,7 +11,7 @@ sleep 2
 mkdir ~/.parity
 sleep 1
 
-docker run --name eth -p 8546:8546 \
+docker run --name ethmainnet -p 8546:8546 \
            -v ~/.parity:/home/parity/.local/share/io.parity.ethereum/ \
            -it parity/parity:stable --ws-interface=all --ws-origins="all" \
            --base-path /home/parity/.local/share/io.parity.ethereum/
