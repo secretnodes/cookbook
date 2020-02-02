@@ -5,10 +5,10 @@
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal.
 #Confirmed working on enigma.co testnet
 
-docker pull parity/parity
+docker pull ethereum/client-go:latest
 sleep 2
 
-mkdir ~/.parity
+mkdir ~/.geth
 sleep 1
 
 docker run --name ethmainnet -p 8546:8546 \

@@ -5,7 +5,7 @@
 #Should work for SGX compatible intel NUCs, Vultr Bare Metal, (more to come)
 #Confirmed working on enigma.co testnet
 
-echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/scripts/issues"
+echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/soup/issues"
 
 echo $(date -u) "Downloading and installing enigma node software."
 git clone https://github.com/enigmampc/discovery-testnet
