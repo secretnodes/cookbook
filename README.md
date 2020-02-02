@@ -1,9 +1,10 @@
-# scripts
-These scripts are meant to empower node runners. More information will be added as time goes on.
+# Soup
+Soup is a collection of scripts by secretnodes.org meant to empower Node Runners. More information will be added as time goes on.
 
 [![asciicast](https://asciinema.org/a/297118.svg)](https://asciinema.org/a/297118)
 
-# Provision your machine with software needed to run Enigma Secret Nodes & Ethereum Nodes.
+# Provision your machine with software needed to run nodes.
+This script will download SGX drivers, docker, docker compose, and a collection of scripts to launch various nodes.
 
 1. Download our node provision script.
 ```bash
@@ -32,7 +33,7 @@ docker ps
 If the command returns a permission error, then reboot your machine and try again from step 3.
 
 # Prepare and launch your Ethereum Kovan Full Node
-Note: Running a Full Kovan ETH node is a requirement to run a Secret Node.
+Note: Running a Full Kovan ETH node is a requirement to run an Enigma Secret Node.
 
 To prepare and launch your ETH Kovan Full node, simply run the following command.
 
