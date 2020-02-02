@@ -1,4 +1,4 @@
-# Soup
+# Soup by secretnodes.org
 Soup is a collection of scripts by secretnodes.org meant to empower Node Runners. More information will be added as time goes on.
 
 [![asciicast](https://asciinema.org/a/297118.svg)](https://asciinema.org/a/297118)
