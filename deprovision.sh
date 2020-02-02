@@ -48,6 +48,6 @@ echo "===> Docker-CE uninstalled successfully."
 sleep 2
 
 
-echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/soup/issues"
+echo "Please report any issues you encounter by clicking New Issue on this page https://github.com/secretnodes/cookbook/issues"
 echo "<3 from https://secretnodes.org"
 

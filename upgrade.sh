@@ -24,27 +24,27 @@ sleep 1
 sudo docker pull parity/parity:stable
 
 echo $(date -u) "Downloading scripts from secretnodes.org"
-wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/soup/master/eng-cli.sh
+wget -O eng-cli.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eng-cli.sh
 sleep 2
-wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/soup/master/eng-start.sh
+wget -O eng-start.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eng-start.sh
 sleep 2
-wget -O provision.sh https://raw.githubusercontent.com/secretnodes/soup/master/provision.sh
+wget -O provision.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/provision.sh
 sleep 2
-wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/soup/master/eth-kovan.sh
+wget -O eth-kovan.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eth-kovan.sh
 sleep 2
-wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/soup/master/eth-remove.sh
+wget -O eth-remove.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eth-remove.sh
 sleep 2
-wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/soup/master/eth-stop.sh
+wget -O eth-stop.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eth-stop.sh
 sleep 2
-wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/soup/master/eth-start.sh
+wget -O eth-start.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eth-start.sh
 sleep 2
-wget -O eng-node.sh https://raw.githubusercontent.com/secretnodes/soup/master/eng-node.sh
+wget -O eng-node.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eng-node.sh
 sleep 2
-wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/soup/master/eng-stop.sh
+wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/eng-stop.sh
 sleep 2
-wget -O readme.md https://raw.githubusercontent.com/secretnodes/soup/master/README.md
+wget -O readme.md https://raw.githubusercontent.com/secretnodes/cookbook/master/README.md
 sleep 2
-wget -O deprovsion.sh https://raw.githubusercontent.com/secretnodes/soup/master/deprovision.sh
+wget -O deprovsion.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/deprovision.sh
 sleep 2
 
 echo $(date -u) "Change permissions for install sgx, install docker, start, & upgrade scripts." 

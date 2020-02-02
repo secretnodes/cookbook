@@ -7,7 +7,7 @@ These scripts are meant to empower node runners. More information will be added 
 
 1. Download our node provision script.
 ```bash
-wget https://raw.githubusercontent.com/secretnodes/soup/master/provision.sh
+wget https://raw.githubusercontent.com/secretnodes/cookbook/master/provision.sh
 ```
 
 2. Run the secretnodes.org provision script. Be sure to respond with "y" or "yes" to all inquiries.
