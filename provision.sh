@@ -159,7 +159,7 @@ wget -O eng-stop.sh https://raw.githubusercontent.com/secretnodes/cookbook/maste
 sleep 2
 wget -O readme.md https://raw.githubusercontent.com/secretnodes/cookbook/master/README.md
 sleep 2
-wget -O deprovsion.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/deprovision.sh
+wget -O deprovision.sh https://raw.githubusercontent.com/secretnodes/cookbook/master/deprovision.sh
 sleep 2
 
 echo $(date -u) "Change permissions for scripts." 
