@@ -1,7 +1,7 @@
 # The Secret Nodes Cookbook
 The Secret Nodes Cookbook is a collection of recipes for privacy. More information (recepies) will be added as time goes on.
 
-[![asciicast](https://asciinema.org/a/IkNGIBYYU1qlFtQNaeaRFaiEW.svg)](https://asciinema.org/a/IkNGIBYYU1qlFtQNaeaRFaiEW)
+[![asciicast](https://asciinema.org/a/297423.svg)](https://asciinema.org/a/297423)
 
 # Provision your machine with software needed to run nodes.
 This script will download SGX drivers, docker, docker compose, and a collection of scripts to launch various nodes.
