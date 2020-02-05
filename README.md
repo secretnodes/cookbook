@@ -32,18 +32,4 @@ docker ps
 
 If the command returns a permission error, then reboot your machine and try again from step 3.
 
-# Prepare your Ethereum Kovan Node
-Note: Running a Full Kovan ETH node is a requirement to run an Enigma Secret Node.
 
-To prepare and launch your ETH Kovan Full node, simply run the following command.
-
-```bash
-bash eth-kovan.sh
-```
-
-# Start a stopped ETH Kovan node
-
-Run the following command:
-```bash
-bash eth-start.sh
-```
